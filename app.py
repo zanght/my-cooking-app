@@ -7,7 +7,7 @@ import streamlit as st
 from PIL import Image
 
 
-APP_TITLE = "很好吃"
+APP_TITLE = "好好吃饭"
 DATA_PATH = Path(__file__).with_name("recipes.json")
 ASSETS_DIR = Path(__file__).with_name("assets")
 
