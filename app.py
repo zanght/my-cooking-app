@@ -5,7 +5,7 @@ from pathlib import Path
 import streamlit as st
 
 
-APP_TITLE = "好好吃饭"
+APP_TITLE = "很好吃"
 DATA_PATH = Path(__file__).with_name("recipes.json")
 ASSETS_DIR = Path(__file__).with_name("assets")
 
@@ -131,7 +131,11 @@ def recommend_by_ingredients(recipes: dict, user_text: str) -> list[tuple[str, d
     return candidates
 
 
-st.set_page_config(page_title=APP_TITLE, page_icon="🍳", layout="centered")
+st.set_page_config(
+    page_title=APP_TITLE,
+    page_icon=str(ASSETS_DIR / "app_icons" / "app_icon_180.png"),
+    layout="centered",
+)
 
 # 自定义整体样式：日系治愈风（奶黄色主基调）
 CREAMY_CSS = """
